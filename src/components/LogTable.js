@@ -1,6 +1,16 @@
 import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton } from "@mui/material";
+import {
+  Box,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+  IconButton,
+} from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import EditLogModal from "./EditLogModal";
@@ -42,7 +52,9 @@ const LogTable = () => {
           <TableHead>
             <TableRow>
               <TableCell>Type</TableCell>
-              <TableCell>Message</TableCell>
+              <TableCell>Error Code</TableCell>
+              <TableCell>Error Message</TableCell>
+              <TableCell>How to solve</TableCell>
               <TableCell>Timestamp</TableCell>
             </TableRow>
           </TableHead>
@@ -50,7 +62,9 @@ const LogTable = () => {
             {logs.map((log, index) => (
               <TableRow key={index}>
                 <TableCell>{log.type}</TableCell>
+                <TableCell>{log.code}</TableCell>
                 <TableCell>{log.message}</TableCell>
+                <TableCell>{log.solve}</TableCell>
                 <TableCell>{log.timestamp}</TableCell>
                 <TableCell>
                   <IconButton onClick={() => handleEditOpen(log)}>

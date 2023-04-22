@@ -5,15 +5,17 @@ const logSlice = createSlice({
   initialState: [],
   reducers: {
     addLog: (state, action) => {
-      const { id, message, type, timestamp } = action.payload;
-      state.push({ id, message, type, timestamp });
+      const { id, type, code, message, solve, timestamp } = action.payload;
+      state.push({ id, type, code, message, solve, timestamp });
     },
     editLog: (state, action) => {
-      const { id, message, type, timestamp } = action.payload;
+      const { id, type, code, message, solve, timestamp } = action.payload;
       const logToEdit = state.find((log) => log.id === id);
       if (logToEdit) {
-        logToEdit.message = message;
         logToEdit.type = type;
+        logToEdit.code = code;
+        logToEdit.message = message;
+        logToEdit.solve = solve;
         logToEdit.timestamp = timestamp;
       }
     },
