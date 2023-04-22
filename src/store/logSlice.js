@@ -2,7 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const logSlice = createSlice({
   name: "logs",
-  initialState: [],
+  initialState: [
+    {
+      id: "sample",
+      type: "Error",
+      code: "TS404",
+      message: "This is Error Message",
+      solve: "I reviewed the spelling.",
+      timestamp: new Date().toLocaleString(),
+    },
+  ],
   reducers: {
     addLog: (state, action) => {
       const { id, type, code, message, solve, timestamp } = action.payload;
