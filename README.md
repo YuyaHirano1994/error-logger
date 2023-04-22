@@ -1,8 +1,8 @@
 # Error-logger
 
-React x Redux.
-Accumulate logs of errors and assist in resolving similar errors when they occur.
-(Don't use any database. This was created to learn basic Redux usage.)
+React x Redux. <br />
+Accumulate logs of errors and assist in resolving similar errors when they occur.<br />
+(This was created to learn basic Redux usage.)<br />
 
 # DEMO
 
