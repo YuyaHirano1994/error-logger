@@ -25,8 +25,8 @@ const AddLogForm = () => {
   return (
     <Box component="div" sx={{ marginTop: "20px" }}>
       <Box sx={{ marginBottom: "10px" }}>
-        <TextField label="Type" variant="outlined" value={type} onChange={(e) => setType(e.target.value)} />
-        <TextField label="Code" variant="outlined" value={code} onChange={(e) => setCode(e.target.value)} />
+        <TextField required label="Type" variant="outlined" value={type} onChange={(e) => setType(e.target.value)} />
+        <TextField required label="Code" variant="outlined" value={code} onChange={(e) => setCode(e.target.value)} />
       </Box>
       <Box sx={{ width: "100vw", marginBottom: "10px" }}>
         <TextField
