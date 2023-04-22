@@ -26,14 +26,13 @@ const LogTable = () => {
     setEditOpen(false);
   };
 
-  const handleDelete = (logId) => {
-    console.log(logId);
-    dispatch(deleteLog(logId));
-  };
-
   const handleEdit = (editedLog) => {
     dispatch(editLog({ ...editedLog }));
     handleEditClose();
+  };
+
+  const handleDelete = (logId) => {
+    dispatch(deleteLog({ id: logId }));
   };
 
   return (

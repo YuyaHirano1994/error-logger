@@ -19,10 +19,8 @@ const logSlice = createSlice({
     },
     deleteLog: (state, action) => {
       const { id } = action.payload;
-      const index = state.findIndex((log) => log.id === id);
-      if (index !== -1) {
-        state.splice(index, 1);
-      }
+      console.log(id);
+      return state.filter((log) => log.id !== id);
     },
   },
 });
